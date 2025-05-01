@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoAble - Find Your Way. Your Way.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfi2bEmfJxd6c8PBqmdkJb2EQJyLF6iRs&libraries=places" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="images/goable-logo.svg" alt="GoAble Logo" class="logo-image">
+            </div>
+            <p class="tagline">Find Your Way. Your Way.</p>
+        </div>
+    </header>
+    <main>
+        <!-- Search Section -->
+        <section id="search-container">
+            <input type="text" id="location-search" placeholder="Search for a location...">
+            <button id="search-button">Search</button>
+        </section>
+
+        <!-- Map Controls Section -->
+        <section id="map-controls">
+            <button class="filter-button" data-type="washroom">
+                <img src="images/washroom-icon.png" alt="Washroom Icon"> Washrooms
+            </button>
+            <button class="filter-button" data-type="hospital">
+                <img src="images/hospital-icon.png" alt="Hospital Icon"> Hospitals
+            </button>
+            <button class="filter-button" data-type="restaurant">
+                <img src="images/restaurant-icon.png" alt="Restaurant Icon"> Restaurants
+            </button>
+            <button class="filter-button" data-type="parking">
+                <img src="images/parking-icon.png" alt="Parking Icon"> Parking
+            </button>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map-container">
+            <div id="map"></div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop-section">
+            <h2>Accessibility Products</h2>
+            <div id="shop-items">
+                <!-- Example Products -->
+                <div class="shop-item">
+                    <img src="images/wheelchair.jpg" alt="Wheelchair">
+                    <h3>Wheelchair</h3>
+                    <p>$120</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="shop-item">
+                    <img src="images/walking-stick.jpg" alt="Walking Stick">
+                    <h3>Walking Stick</h3>
+                    <p>$25</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="shop-item">
+                    <img src="images/hearing-aid.jpg" alt="Hearing Aid">
+                    <h3>Hearing Aid</h3>
+                    <p>$300</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart-section">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: $0</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 GoAble. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
